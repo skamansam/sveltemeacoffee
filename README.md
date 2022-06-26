@@ -22,12 +22,11 @@ There are SVG images in the BMAC creator kit, so I used those to create a SVG im
 ### Defaults:
 
 <div align="center">
-
-  <img src="assets/logo.png" alt="logo" width="200" height="auto" />
-  <h1>Awesome Readme Template</h1>
+<a href="https://www.buymeacoffee.com/skamansamV" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
+  <h1>Svelte Me A Coffee</h1>
   
   <p>
-    An awesome README template for your projects! 
+    A Svelte SVG component for a buymeacoffee.com button. 
   </p>
   
   
