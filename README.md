@@ -57,9 +57,9 @@ There are SVG images in the BMAC creator kit, so I used those to create a SVG im
   <span> · </span>
     <a href="https://github.com/skamansam/sveltemeacoffee">Documentation</a>
   <span> · </span>
-    <a href="https://github.com/skamansam/sveltemeacoffee/issues/">Report Bug</a>
+    <a href="https://github.com/skamansam/sveltemeacoffee/issues/new?template=bug_report.md">Report Bug</a>
   <span> · </span>
-    <a href="https://github.com/skamansam/sveltemeacoffee/issues/">Request Feature</a>
+    <a href="https://github.com/skamansam/sveltemeacoffee/issues/new?template=feature_request.md">Request Feature</a>
   </h4>
 </div>
 
@@ -98,6 +98,8 @@ There are SVG images in the BMAC creator kit, so I used those to create a SVG im
 <!-- Screenshots -->
 ### :camera: Screenshots
 
+> As soon as I get a demo page up and running, I will add a screenshot.
+
 <div align="center"> 
   <img src="https://placehold.co/600x400?text=Your+Screenshot+here" alt="screenshot" />
 </div>
@@ -106,76 +108,28 @@ There are SVG images in the BMAC creator kit, so I used those to create a SVG im
 <!-- TechStack -->
 ### :space_invader: Tech Stack
 
-<details>
-  <summary>Client</summary>
-  <ul>
-    <li><a href="https://www.typescriptlang.org/">Typescript</a></li>
-    <li><a href="https://nextjs.org/">Next.js</a></li>
-    <li><a href="https://reactjs.org/">React.js</a></li>
-    <li><a href="https://tailwindcss.com/">TailwindCSS</a></li>
-  </ul>
-</details>
+<ul>
+  <li><a href="https://www.typescriptlang.org/">Typescript</a></li>
+  <li><a href="https://nextjs.org/">Next.js</a></li>
+  <li><a href="https://reactjs.org/">React.js</a></li>
+  <li><a href="https://tailwindcss.com/">TailwindCSS</a></li>
+</ul>
 
-<details>
-  <summary>Server</summary>
-  <ul>
-    <li><a href="https://www.typescriptlang.org/">Typescript</a></li>
-    <li><a href="https://expressjs.com/">Express.js</a></li>
-    <li><a href="https://go.dev/">Golang</a></li>
-    <li><a href="https://nestjs.com/">Nest.js</a></li>
-    <li><a href="https://socket.io/">SocketIO</a></li>
-    <li><a href="https://www.prisma.io/">Prisma</a></li>    
-    <li><a href="https://www.apollographql.com/">Apollo</a></li>
-    <li><a href="https://graphql.org/">GraphQL</a></li>
-  </ul>
-</details>
-
-<details>
-<summary>Database</summary>
-  <ul>
-    <li><a href="https://www.mysql.com/">MySQL</a></li>
-    <li><a href="https://www.postgresql.org/">PostgreSQL</a></li>
-    <li><a href="https://redis.io/">Redis</a></li>
-    <li><a href="https://neo4j.com/">Neo4j</a></li>
-    <li><a href="https://www.mongodb.com/">MongoDB</a></li>
-  </ul>
-</details>
-
-<details>
-<summary>DevOps</summary>
-  <ul>
-    <li><a href="https://www.docker.com/">Docker</a></li>
-    <li><a href="https://www.jenkins.io/">Jenkins</a></li>
-    <li><a href="https://circleci.com/">CircleCLI</a></li>
-  </ul>
-</details>
 
 <!-- Features -->
 ### :dart: Features
 
-- Feature 1
-- Feature 2
-- Feature 3
+- SVG Output
+- Configure Color for:
+  - background
+  - text
+  - coffee cup
+  - coffee
+- Configure text
+- Use any font from https://fonts.google.com (and any variant)
+- adjust size, as a multiplicitave (sorry, not adjustable for exact pixel size yet)
+- adjust width, to accomodate longer text (sorry, no automatic width yet)
 
-<!-- Color Reference -->
-### :art: Color Reference
-
-| Color             | Hex                                                                |
-| ----------------- | ------------------------------------------------------------------ |
-| Primary Color | ![#222831](https://via.placeholder.com/10/222831?text=+) #222831 |
-| Secondary Color | ![#393E46](https://via.placeholder.com/10/393E46?text=+) #393E46 |
-| Accent Color | ![#00ADB5](https://via.placeholder.com/10/00ADB5?text=+) #00ADB5 |
-| Text Color | ![#EEEEEE](https://via.placeholder.com/10/EEEEEE?text=+) #EEEEEE |
-
-
-<!-- Env Variables -->
-### :key: Environment Variables
-
-To run this project, you will need to add the following environment variables to your .env file
-
-`API_KEY`
-
-`ANOTHER_API_KEY`
 
 <!-- Getting Started -->
 ## 	:toolbox: Getting Started
@@ -183,22 +137,26 @@ To run this project, you will need to add the following environment variables to
 <!-- Prerequisites -->
 ### :bangbang: Prerequisites
 
-This project uses Yarn as package manager
+This project uses pnpm as package manager, but any node package manager will do.
 
 ```bash
- npm install --global yarn
+ npm install --global pnpm
 ```
 
 <!-- Installation -->
 ### :gear: Installation
 
-Install my-project with npm
+#### with pnpm
 
 ```bash
-  yarn install my-project
-  cd my-project
+  pnpm add sveltemeacoffee
 ```
-   
+
+#### with pnpm
+
+```bash
+  pnpm add sveltemeacoffee
+```   
 <!-- Running Tests -->
 ### :test_tube: Running Tests
 
@@ -253,19 +211,21 @@ Use this space to tell a little more about your project and how it can be used. 
 
 
 ```javascript
-import Component from 'my-project'
+<script>
+import BuyMeACoffee from 'sveltemeacoffee';
+</script>
 
-function App() {
-  return <Component />
-}
+<BuyMeACoffee/>
 ```
 
 <!-- Roadmap -->
 ## :compass: Roadmap
 
-* [x] Todo 1
-* [ ] Todo 2
-
+* [x] Initial Release
+* [ ] Add size adjustment in pixels
+* [ ] [Add automatic width adjustment to accommodate text](https://stackoverflow.com/questions/118241/calculate-text-width-with-javascript)
+* [ ] Optional output in HTML/CSS instead of SVG.
+* [ ] Create a customElement for use anywhere
 
 <!-- Contributing -->
 ## :wave: Contributing
@@ -288,25 +248,21 @@ Please read the [Code of Conduct](https://github.com/skamansam/sveltemeacoffee/b
 <!-- FAQ -->
 ## :grey_question: FAQ
 
-- Question 1
+- Can you implement feature X,Y, or Z?
 
-  + Answer 1
-
-- Question 2
-
-  + Answer 2
+  + If you create a feature request, I will be happy to see if it is within the scope of this project. TBH, this is just a kind of one-off project I created to get a button in my blog, but I will try to respond within a reasonable amount of time. If, however, you would like to get your hands wet and fix something or add a feature, feel free to fork this repo and submit a pull request.
 
 
 <!-- License -->
 ## :warning: License
 
-Distributed under the no License. See LICENSE.txt for more information.
+Distributed under the Unlicense. See LICENSE.txt for more information.
 
 
 <!-- Contact -->
 ## :handshake: Contact
 
-Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - email@email_client.com
+Your Name - [@skamansam](https://twitter.com/skamansam) - skamansam@gmail.com
 
 Project Link: [https://github.com/skamansam/sveltemeacoffee](https://github.com/skamansam/sveltemeacoffee)
 
@@ -317,6 +273,4 @@ Project Link: [https://github.com/skamansam/sveltemeacoffee](https://github.com/
 Use this section to mention useful resources and libraries that you have used in your projects.
 
  - [Shields.io](https://shields.io/)
- - [Awesome README](https://github.com/matiassingers/awesome-readme)
- - [Emoji Cheat Sheet](https://github.com/ikatyang/emoji-cheat-sheet/blob/master/README.md#travel--places)
  - [Readme Template](https://github.com/othneildrew/Best-README-Template)
