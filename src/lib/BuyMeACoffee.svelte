@@ -35,7 +35,7 @@
     color: #666;
   }
 </style>
-
+<svelte:options tag="buy-me-a-coffee"/>
 <svelte:head>
   {#if fontFamily && text}
     <link rel="preconnect" href="https://fonts.googleapis.com" />
