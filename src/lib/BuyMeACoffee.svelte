@@ -1,6 +1,6 @@
 <script lang="ts">
-  import GoogleFont, { getFontStyle } from "@svelte-web-fonts/google";
-  import type { GoogleFontDefinition, GoogleFontVariant } from "@svelte-web-fonts/google";
+  import WebfontImporter from "webfont-importer";
+  import type { Font } from "webfont-importer/types";
 
   export let text: string|null = null;
   export let bgColor = "#FFDD00";
@@ -18,7 +18,7 @@
   if (text && !fontFamily) fontFamily = 'Cookie';
   if (fontFamily && !text) text = "Buy me a coffee";
 
-  let fonts: GoogleFontDefinition[] = [];
+  let fonts: Font[] = [];
   $: {
       fonts  = [{
         family: fontFamily,
@@ -38,9 +38,7 @@
 <svelte:options tag="buy-me-a-coffee"/>
 <svelte:head>
   {#if fontFamily && text}
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <GoogleFont {fonts} display="swap" />
+    <WebfontImporter></WebfontImporter>
   {/if}
 </svelte:head>
 

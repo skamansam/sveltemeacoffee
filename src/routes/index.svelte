@@ -2,8 +2,8 @@
 import BuyMeACoffee from '../lib/BuyMeACoffee.svelte'
 </script>
 
-
+<svelte:options tag={null}/>
 <h1>Svelte Me A Coffee</h1>
 <p></p>
 
-<buy-me-a-coffee></buy-me-a-coffee>
+<BuyMeACoffee></BuyMeACoffee>
